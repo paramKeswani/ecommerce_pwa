@@ -1190,6 +1190,17 @@
 		
 		<!-- all js here -->
 		<!-- jquery latest version -->
+		<script>
+			if ('serviceWorker' in navigator) {
+    // register the service worker
+    navigator.serviceWorker.register('service-worker.js')
+        .then(function(reg){
+            console.log("service worker registered");
+        }).catch(function(err) {
+            console.log("error: ", err)
+        });
+}
+		</script>
         <script src="js/vendor/jquery-1.12.0.min.js"></script>
 		<!-- bootstrap js -->
         <script src="js/bootstrap.min.js"></script>
